@@ -1,5 +1,7 @@
-export default function page() {
+export default function IndexPage() {
   return (
-    <div>page</div>
+    <div>
+      <h1>Hello index page</h1>
+    </div>
   )
 }
