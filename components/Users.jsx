@@ -1,28 +1,15 @@
-"use client";
-import { useRouter } from "next/router";
+import React from "react";
 
-export default function Users({ users }) {
-
-  const router = useRouter()
-
+export default function Users({users}) {
   return (
     <div>
       <ul>
         {users.map((user) => (
-          <li
-            key={user.id}
-            onClick={() => {
-              router.push(`/users/${user.id}`)
-            }}
-          >
-            <div>
-              <h5>
-                {user.id} {user.first_name} {user.last_name}
-              </h5>
-              <p>{user.email}</p>
-            </div>
-            <img src={user.avatar} alt={user.first_name} />
-          </li>
+          <div key={user.id}>
+            <h5>{user.first_name} {user.last_name}</h5>
+            <h6>{user.email} </h6>
+            <img src={user.avatar} alt={user.email} />
+          </div>
         ))}
       </ul>
     </div>

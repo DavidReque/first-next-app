@@ -5,7 +5,6 @@ async function fetchUsers() {
   const data = await res.json();
   return data.data;
 }
-
 export default async function IndexPage() {
   const users = await fetchUsers();
   return (
